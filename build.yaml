@@ -1,0 +1,13 @@
+targets:
+  x_generator:x_generator:
+    builders:
+      x_generator|generateAnnotation:
+        enabled: true
+
+builders:
+  generateAnnotation:
+    import: "package:x_generator/x_generator.dart"
+    builder_factories: ["generateAnnotation"]
+    build_extensions: { ".dart": ["_generated.dart"] }
+    auto_apply: root_package
+    build_to: source
